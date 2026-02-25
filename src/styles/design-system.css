@@ -1,0 +1,177 @@
+/**
+ * Design System — Variáveis globais
+ * Baseado em src/assets/design_system/*.md (Untitled UI)
+ */
+
+/* ========== COLORS ========== */
+:root {
+  /* Gray */
+  --color-gray-25: #FCFCFD;
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F2F4F7;
+  --color-gray-200: #EAECF0;
+  --color-gray-300: #D0D5DD;
+  --color-gray-400: #98A2B3;
+  --color-gray-500: #667085;
+  --color-gray-600: #475467;
+  --color-gray-700: #344054;
+  --color-gray-800: #1D2939;
+  --color-gray-900: #101828;
+
+  /* Primary */
+  --color-primary-25: #FCFAFF;
+  --color-primary-50: #F9F5FF;
+  --color-primary-100: #F4EBFF;
+  --color-primary-200: #E9D7FE;
+  --color-primary-300: #D6BBFB;
+  --color-primary-400: #B692F6;
+  --color-primary-500: #9E77ED;
+  --color-primary-600: #7F56D9;
+  --color-primary-700: #6941C6;
+  --color-primary-800: #53389E;
+  --color-primary-900: #42307D;
+
+  /* Error */
+  --color-error-25: #FFFBFA;
+  --color-error-50: #FEF3F2;
+  --color-error-100: #FEE4E2;
+  --color-error-200: #FECDCA;
+  --color-error-300: #FDA29B;
+  --color-error-400: #F97066;
+  --color-error-500: #F04438;
+  --color-error-600: #D92D20;
+  --color-error-700: #B42318;
+  --color-error-800: #912018;
+  --color-error-900: #7A271A;
+
+  /* Warning */
+  --color-warning-25: #FFFCF5;
+  --color-warning-50: #FFFAEB;
+  --color-warning-100: #FEF0C7;
+  --color-warning-200: #FEDF89;
+  --color-warning-300: #FEC84B;
+  --color-warning-400: #FDB022;
+  --color-warning-500: #F79009;
+  --color-warning-600: #DC6803;
+  --color-warning-700: #B54708;
+  --color-warning-800: #93370D;
+  --color-warning-900: #7A2E0E;
+
+  /* Success */
+  --color-success-25: #F6FEF9;
+  --color-success-50: #ECFDF3;
+  --color-success-100: #D1FADF;
+  --color-success-200: #A6F4C5;
+  --color-success-300: #6CE9A6;
+  --color-success-400: #32D583;
+  --color-success-500: #12B76A;
+  --color-success-600: #039855;
+  --color-success-700: #027A48;
+  --color-success-800: #05603A;
+  --color-success-900: #054F31;
+
+  /* White */
+  --color-white: #FFFFFF;
+
+  /* Blue (charts, links) */
+  --color-blue-500: #2E90FA;
+  --color-blue-600: #1570EF;
+
+  /* ========== SHADOWS ========== */
+  --shadow-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.051);
+  --shadow-sm: 0px 1px 2px 0px rgba(16, 24, 40, 0.059), 0px 1px 3px 0px rgba(16, 24, 40, 0.102);
+  --shadow-md: 0px 2px 4px -2px rgba(16, 24, 40, 0.059), 0px 4px 8px -2px rgba(16, 24, 40, 0.102);
+  --shadow-lg: 0px 4px 6px -2px rgba(16, 24, 40, 0.031), 0px 12px 16px -4px rgba(16, 24, 40, 0.078);
+  --shadow-xl: 0px 8px 8px -4px rgba(16, 24, 40, 0.031), 0px 20px 24px -4px rgba(16, 24, 40, 0.078);
+  --shadow-2xl: 0px 24px 48px -12px rgba(16, 24, 40, 0.180);
+  --shadow-3xl: 0px 32px 64px -12px rgba(16, 24, 40, 0.141);
+
+  /* Focus rings */
+  --focus-ring-primary: 0 0 0 4px var(--color-primary-100);
+  --focus-ring-error: 0 0 0 4px var(--color-error-100);
+  --focus-ring-gray: 0 0 0 4px var(--color-gray-100);
+
+  /* ========== TYPOGRAPHY ========== */
+  --font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Display */
+  --font-display-2xl-size: 4.5rem;
+  --font-display-2xl-line-height: 90px;
+  --font-display-2xl-letter-spacing: -0.02em;
+
+  --font-display-xl-size: 3.75rem;
+  --font-display-xl-line-height: 72px;
+  --font-display-xl-letter-spacing: -0.02em;
+
+  --font-display-lg-size: 3rem;
+  --font-display-lg-line-height: 60px;
+  --font-display-lg-letter-spacing: -0.02em;
+
+  --font-display-md-size: 2.25rem;
+  --font-display-md-line-height: 44px;
+  --font-display-md-letter-spacing: -0.02em;
+
+  --font-display-sm-size: 1.875rem;
+  --font-display-sm-line-height: 38px;
+  --font-display-sm-letter-spacing: 0;
+
+  --font-display-xs-size: 1.5rem;
+  --font-display-xs-line-height: 32px;
+  --font-display-xs-letter-spacing: 0;
+
+  /* Text */
+  --font-text-xl-size: 1.25rem;
+  --font-text-xl-line-height: 30px;
+  --font-text-xl-letter-spacing: 0;
+
+  --font-text-lg-size: 1.125rem;
+  --font-text-lg-line-height: 28px;
+  --font-text-lg-letter-spacing: 0;
+
+  --font-text-md-size: 1rem;
+  --font-text-md-line-height: 24px;
+  --font-text-md-letter-spacing: 0;
+
+  --font-text-sm-size: 0.875rem;
+  --font-text-sm-line-height: 20px;
+  --font-text-sm-letter-spacing: 0;
+
+  --font-text-xs-size: 0.75rem;
+  --font-text-xs-line-height: 18px;
+  --font-text-xs-letter-spacing: 0;
+
+  /* ========== SPACING (4pt grid) ========== */
+  --spacing-1: 0.25rem;   /* 4px */
+  --spacing-2: 0.5rem;    /* 8px */
+  --spacing-3: 0.75rem;   /* 12px */
+  --spacing-4: 1rem;      /* 16px */
+  --spacing-5: 1.25rem;   /* 20px */
+  --spacing-6: 1.5rem;    /* 24px */
+  --spacing-8: 2rem;      /* 32px */
+  --spacing-10: 2.5rem;   /* 40px */
+  --spacing-12: 3rem;     /* 48px */
+  --spacing-16: 4rem;     /* 64px */
+  --spacing-20: 5rem;     /* 80px */
+
+  /* ========== BORDER RADIUS ========== */
+  --radius-sm: 0.375rem;   /* 6px */
+  --radius-md: 0.5rem;     /* 8px */
+  --radius-lg: 0.75rem;    /* 12px */
+  --radius-xl: 1rem;       /* 16px */
+  --radius-full: 9999px;
+
+  /* ========== GRADIENTS ========== */
+  --gradient-gray-600-500-90deg: linear-gradient(90deg, #475467, #667085);
+  --gradient-gray-700-600-45deg: linear-gradient(45deg, #344054, #475467);
+  --gradient-gray-800-600-45deg: linear-gradient(45deg, #1D2939, #475467);
+  --gradient-gray-800-600-90deg: linear-gradient(90deg, #1D2939, #475467);
+  --gradient-gray-800-700-26_5deg: linear-gradient(26.5deg, #1D2939, #344054);
+  --gradient-gray-900-600-45deg: linear-gradient(45deg, #101828, #475467);
+
+  --gradient-primary-600-500-90deg: linear-gradient(90deg, #7F56D9, #9E77ED);
+  --gradient-primary-700-600-45deg: linear-gradient(45deg, #6941C6, #7F56D9);
+  --gradient-primary-800-600-45deg: linear-gradient(45deg, #53389E, #7F56D9);
+  --gradient-primary-800-600-90deg: linear-gradient(90deg, #53389E, #7F56D9);
+  --gradient-primary-800-700-26_5deg: linear-gradient(26.5deg, #53389E, #6941C6);
+  --gradient-primary-900-600-45deg: linear-gradient(45deg, #42307D, #7F56D9);
+}
