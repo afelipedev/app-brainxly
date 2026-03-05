@@ -1,6 +1,6 @@
 import { useSidebar } from "@/features/sidebar/hooks/useSidebar";
 import { Menu } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MoreModulesPanel } from "./MoreModulesPanel";
 import { SidebarPrimary } from "./SidebarPrimary";
 import { SidebarSecondary } from "./SidebarSecondary";
@@ -14,9 +14,15 @@ export function SidebarLayout({ onLogout, children }: SidebarLayoutProps) {
   const { isSecondaryOpen } = useSidebar();
   const [isPrimaryDrawerOpen, setPrimaryDrawerOpen] = useState(false);
 
+  useEffect(() => {
+    if (!isSecondaryOpen) {
+      setPrimaryDrawerOpen(true);
+    }
+  }, [isSecondaryOpen]);
+
   return (
     <div className="flex h-screen overflow-hidden bg-background text-foreground">
-      <div className="hidden h-screen md:flex">
+      <div className="hidden h-screen shrink-0 md:flex">
         <SidebarPrimary onLogout={onLogout} />
         <SidebarSecondary />
       </div>

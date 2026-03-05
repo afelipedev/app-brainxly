@@ -172,6 +172,33 @@ export const IA_HUB_NAV_ITEMS = [
   { id: "registros-auditoria", label: "Registros de auditoria", icon: Clock },
 ] as const;
 
+/** Menu "Criar" do dropdown + no módulo Equipes */
+export const EQUIPES_CRIAR_ITEMS = [{ id: "criar-equipe", label: "Criar Equipe" }] as const;
+
+/** Menu "Criar" do dropdown + no módulo Docs Hub */
+export const DOCS_HUB_CRIAR_ITEMS = [
+  { id: "criar-documento", label: "Criar documento", icon: FileText },
+] as const;
+
+/** Documentos favoritos mock para o módulo Docs Hub */
+export const DOCS_HUB_FAVORITES_MOCK = [
+  { id: "doc-1", label: "Documentacao CTM" },
+] as const;
+
+/** Páginas recentes mock para o módulo Docs Hub */
+export const DOCS_HUB_RECENT_PAGES_MOCK = [
+  { id: "doc-2", label: "Mapeamento AS Is" },
+  { id: "doc-3", label: "AAA" },
+  { id: "doc-4", label: "Sem título" },
+  { id: "doc-5", label: "Getting Started Guide" },
+  { id: "doc-6", label: "Project Overview Doc" },
+] as const;
+
+/** Equipes mock para o módulo Equipes (Minhas equipes) */
+export const EQUIPES_MOCK_TEAMS = [
+  { id: "team-1", label: "Desenvolvimento", iconId: "users" },
+] as const;
+
 /** Chats recentes mock para o módulo IA Hub */
 export const IA_HUB_RECENT_CHATS = [
   { id: "chat-1", label: "Task Risk Review" },

@@ -5,6 +5,8 @@ import {
   TREE_NODE_ICON,
   WORKSPACE_ACTION_ICONS,
 } from "@/features/sidebar/data/sidebar.data";
+import { DocsHubSecondaryContent } from "@/features/sidebar/components/DocsHubSecondaryContent";
+import { EquipesSecondaryContent } from "@/features/sidebar/components/EquipesSecondaryContent";
 import { EspacosSecondaryContent } from "@/features/sidebar/components/EspacosSecondaryContent";
 import { IaHubSecondaryContent } from "@/features/sidebar/components/IaHubSecondaryContent";
 import { useSidebar } from "@/features/sidebar/hooks/useSidebar";
@@ -173,6 +175,12 @@ export function SidebarSecondary() {
   const [activeTaskMenuId, setActiveTaskMenuId] = useState<string | null>(null);
   const [currentTimestamp, setCurrentTimestamp] = useState(() => Date.parse(PLANNER_REFERENCE_NOW));
 
+  useEffect(() => {
+    setCurrentTimestamp(Date.now());
+    const intervalId = window.setInterval(() => setCurrentTimestamp(Date.now()), 60_000);
+    return () => window.clearInterval(intervalId);
+  }, []);
+
   if (!isSecondaryOpen) return null;
 
   function openContextModal(itemLabel: string) {
@@ -226,12 +234,6 @@ export function SidebarSecondary() {
       date.getFullYear() === today.getFullYear()
     );
   }
-
-  useEffect(() => {
-    setCurrentTimestamp(Date.now());
-    const intervalId = window.setInterval(() => setCurrentTimestamp(Date.now()), 60_000);
-    return () => window.clearInterval(intervalId);
-  }, []);
 
   const selectedParticipants = selectedParticipantIds.map(participantById).filter(Boolean) as PlannerParticipant[];
   const clientSearchResults = PLANNER_CLIENTS.filter((client) => {
@@ -777,6 +779,10 @@ export function SidebarSecondary() {
           <EspacosSecondaryContent />
         ) : activeModule === SidebarModule.IA_HUB ? (
           <IaHubSecondaryContent />
+        ) : activeModule === SidebarModule.EQUIPES ? (
+          <EquipesSecondaryContent />
+        ) : activeModule === SidebarModule.DOCS_HUB ? (
+          <DocsHubSecondaryContent />
         ) : (
           <>
             <div className="border-b border-sidebar-border p-3">
